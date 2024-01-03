@@ -12,7 +12,7 @@ class scanner:
         portRange = []
         
 
-    def getOpenPorts(self, target, portRange, optional:mode):
+    def getOpenPorts(self, target, portRange, mode):
         #create socket
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         #make a copy of the keys
@@ -41,11 +41,15 @@ class scanner:
                 s.close()
 
         print("\n")
+
+        if mode == False:
+            print("Goodbye")
+
         if mode == True:
-            if(openPorts == None):
+            if(len(openPorts) == 0):
                 print(f"There are no open ports at {target}")
             else:
-                print(f"Open ports for {target})")
+                print(f"Open ports for {target}")
                 print("PORT     SERVICE")
                 for i in openPorts:
                     print(f"{openPorts.keys()[i]}      {openPorts.item()[i]}")
