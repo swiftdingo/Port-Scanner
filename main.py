@@ -3,4 +3,4 @@ import port_scanner
 
 portScanner = port_scanner.scanner()
 
-portScanner.getOpenPorts("heartlandsupport.us", [20, 8450], True)
+portScanner.getOpenPorts("192.168.0.1", [20, 88], True)

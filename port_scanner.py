@@ -36,7 +36,7 @@ class scanner:
                     index += 1  
                 #increase the index and lowPort          
                 else:
-                    print(f"port {serviceList[index]} is closed") 
+                    print(f"port {i} {serviceList[index]} is closed") 
                     index += 1      
                 s.close()
 
