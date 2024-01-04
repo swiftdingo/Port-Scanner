@@ -3,4 +3,4 @@ import port_scanner
 
 portScanner = port_scanner.scanner()
 
-portScanner.getOpenPorts("192.168.0.1", [20, 88], True)
+portScanner.getOpenPorts("104.175.19.70", [20, 115], True)
